@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+
+require '../lib/local_scraper'
+
+LocalScraper::CLI.new.call

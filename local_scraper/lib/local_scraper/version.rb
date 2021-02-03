@@ -1,0 +1,3 @@
+module LocalScraper
+  VERSION = "0.1.0"
+end
