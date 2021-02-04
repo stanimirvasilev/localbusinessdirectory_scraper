@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{this is }
   spec.description   = %q{shshsh}
-  spec.homepage      = "shhshjs"
+  spec.homepage      = "https://github.com/stanimirvasilev/localbusinessdirectory_scaper"
   spec.license       = "hshs"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
