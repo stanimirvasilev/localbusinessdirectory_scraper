@@ -32,13 +32,17 @@ puts "#{index +1}. #{busines}"
 }
 end
 
-def get_business_number(user_input = 2)
-  binding.pry
+def get_business_number
+  #binding.pry
   puts"Which busines number do you need details for"
- user_input = gets.strip.to_i - 1
+ user_input = gets.strip.to_i
 
   end
 
+def valid_input
+
+
+end
 
 
 
