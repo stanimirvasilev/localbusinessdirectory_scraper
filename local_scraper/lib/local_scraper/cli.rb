@@ -1,5 +1,4 @@
 
-require 'pry'
 class LocalScraper::CLI
 
 def  call
@@ -15,16 +14,19 @@ def  call
 end
 
 def make_businesses
+LocalScraper::Scraper.scrape_businesses
 @businesses = LocalScraper::Business.all
-
+#binding.pry
 end
 
 def list_local_businesses
 #list each busines with a number
 puts "Choose a local busines to see it's details"
 @businesses.each_with_index { |busines, index|
-puts "#{index +1}. #{busines}"
+  #binding.pry
+puts "#{index +1}. #{busines.name}"
 }
+
 end
 
 def get_business_number
