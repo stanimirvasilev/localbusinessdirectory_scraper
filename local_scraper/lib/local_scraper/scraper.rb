@@ -1,16 +1,27 @@
 class LocalScraper::Scraper
 
+
 def self.scrape_businesses
   page = Nokogiri::HTML(open("https://www.hamptonvillage.org.uk/index.php/directory"))
 busines = page.css('ul#zentoolslist118 li')
+businesses = []
+
+
 busines.each do |b|
-name = b.css('.element2').text
-detais = b.css('.simple').text
-binding.pry
+busines_name = b.css('.element2').text
+busines_details = b.css('.simple').text
+busines_info = {
+  :name => busines_name,
+  :details => busines_details
+}
+businesses << busines_info
+
+LocalScraper::Business.new(busines_name, busines_details)
+
 end
 
 
-  #LocalScraper::Business.new(name)
+# LocalScraper::Business.new(name)
   # puts name
 
 

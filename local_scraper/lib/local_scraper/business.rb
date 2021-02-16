@@ -3,12 +3,15 @@ class LocalScraper::Business
 
 @@all = []
 
-attr_accessor :name
+attr_accessor :name, :details
 
-def initialize(name)
+def initialize(name, details)
 @name = name
+@details = details
+
 save
 end
+
 
 
 def  self.all
@@ -19,5 +22,5 @@ def save
 @@all << self
 end
 
-#binding.pry
+
 end
